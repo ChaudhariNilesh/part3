@@ -1,14 +1,23 @@
-DELETE http://localhost:3001/api/persons/404
+DELETE http://localhost:3001/api/persons/60a7eff1145c8847ec8dd527
 ###
 POST http://localhost:3001/api/persons  HTTP/1.1
 content-type: application/json
 
 
 {
-    "name":"JAY-Z",
-    "number":"123-45-000"
+    "name":"JAYA",
+    "number":"123-45-111"
+}
+###
+
+PUT http://localhost:3001/api/persons/60a7cc6963e32909ac89542e
+content-type: application/json
+
+{
+    "name":"jay",
+    "number":"123-45-1111"
 }
 
+###
 
-
-# npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
+GET http://localhost:3001/api/persons
