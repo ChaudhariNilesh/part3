@@ -12,7 +12,10 @@
         "morgan": "^1.10.0",
         "nodemon": "^2.0.7"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "eslint": "^7.27.0",
+        "eslint-plugin-react": "^7.23.2"
+    },
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
@@ -20,7 +23,8 @@
         "build:ui": "rm -rf build && cd ../fullstack2021/part2/phonebook/ && npm run build --prod && cp -r build ../../../part3",
         "deploy": "git push heroku HEAD:master",
         "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-        "logs:prod": "heroku logs --tail"
+        "logs:prod": "heroku logs --tail",
+        "lint": "eslint ."
     },
     "author": "Nilesh Chaudhari",
     "license": "MIT"
